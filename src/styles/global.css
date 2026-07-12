@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --blue: #0052a2;
+  --gold: #fdbf0a;
+  --dark: #111827;
+}
+
+body {
+  color: #fff;
+  background: var(--dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }

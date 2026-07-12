@@ -1,0 +1,36 @@
+globalThis.process ??= {}; globalThis.process.env ??= {};
+import { a as createComponent, f as renderComponent, e as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../chunks/astro/server_Q8MSEbLC.mjs';
+import { $ as $$Layout } from '../chunks/Layout_Ci73L9of.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const featuredBusiness = {
+    name: "National Hire Solutions",
+    trade: "\u{1F3D7}\uFE0F Builders",
+    desc: "Professional tradesmen staffing across the UK",
+    rating: "4.8",
+    reviews: "342"};
+  const cities = [
+    { name: "London", slug: "london" }
+  ];
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "CityTrades UK - Find Trusted Local Tradesmen", "description": "Find vetted, reliable tradesmen in your city. From emergency repairs to full renovations." }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<section style="text-align:center;background:#111827;padding:clamp(48px,10vw,80px) 24px"> <div class="wrap"> <h1 style="margin-bottom:12px;font-size:clamp(28px,7vw,48px);font-weight:800;line-height:1.1">
+Find Trusted Tradesmen<br>in Your City
+</h1> <p style="opacity:.7;max-width:500px;margin-bottom:28px;margin-left:auto;margin-right:auto;font-size:clamp(14px,3.5vw,18px)">
+Vetted professionals for every job. From emergency repairs to full renovations.
+</p> <div style="flex-wrap:wrap;justify-content:center;gap:12px;display:flex"> <a href="https://london.citytrades.uk/" style="cursor:pointer;border:none;border-radius:8px;align-items:center;gap:8px;padding:14px 28px;font-size:15px;font-weight:700;display:inline-flex;color:#111827;background:#fdbf0a">Browse London</a> <a href="https://nationalhiresolutions.citytrades.uk/" style="cursor:pointer;border:none;border-radius:8px;align-items:center;gap:8px;padding:14px 28px;font-size:15px;font-weight:700;display:inline-flex;color:#111827;background:#fff">View National Hire Solutions</a> </div> </div> </section>  <section style="text-align:center;padding:48px 24px"> <div class="wrap"> <h2 style="margin-bottom:6px;font-size:clamp(20px,5vw,32px);font-weight:800">Featured Business</h2> <a href="https://nationalhiresolutions.citytrades.uk/" style="text-align:left;background:#ffffff0f;border:1px solid #ffffff1a;border-radius:12px;flex-direction:column;gap:12px;padding:24px;transition:border-color .2s;display:flex;margin-top:24px"> <div> <div style="margin-bottom:4px;font-size:18px;font-weight:800">${featuredBusiness.name} ${renderTemplate`<span style="color:#fff;vertical-align:middle;background:#16a34a;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600">Verified</span>`}</div> <div style="color:#fdbf0a;margin-bottom:4px;font-size:14px;font-weight:600">${featuredBusiness.trade}</div> <div style="opacity:.7;font-size:13px">${featuredBusiness.desc}</div> </div> <div style="text-align:left;opacity:.8;white-space:nowrap;font-size:14px"> <span style="color:#fdbf0a;letter-spacing:2px">★★★★★</span> ${featuredBusiness.rating} (${featuredBusiness.reviews})
+<div style="color:#fdbf0a;margin-top:4px;font-weight:700">View Profile →</div> </div> </a> </div> </section>  <section style="text-align:center;padding:48px 24px;background:#0052a2"> <div class="wrap"> <h2 style="margin-bottom:6px;font-size:clamp(20px,5vw,32px);font-weight:800">Cities We Cover</h2> <p style="opacity:.7;margin-bottom:24px;font-size:14px">Trusted tradesmen in cities across the UK</p> <div style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;display:grid"> ${cities.map((city) => renderTemplate`<a${addAttribute(`https://${city.slug}.citytrades.uk/`, "href")} style="text-align:center;background:#ffffff1a;border:1px solid #ffffff26;border-radius:10px;padding:16px;font-size:14px;font-weight:700;transition:all .2s;display:block"> ${city.name} </a>`)} </div> </div> </section> ` })}`;
+}, "/home/fansfollow/projects/citytrades/src/pages/index.astro", void 0);
+
+const $$file = "/home/fansfollow/projects/citytrades/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
