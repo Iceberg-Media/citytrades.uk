@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NationalHireLayout from '../layouts/NationalHireLayout.astro';
 
 const hostname = Astro.url.hostname;
 const isLondon = hostname === 'london.citytrades.uk';
 const isNational = hostname === 'nationalhiresolutions.citytrades.uk';
+const ActiveLayout = isNational ? NationalHireLayout : Layout;
 
 const featuredBusiness = {
   name: "National Hire Solutions Limited",
@@ -37,7 +39,7 @@ const cities = [
 ];
 ---
 
-<Layout title={isLondon ? "London Tradesmen - CityTrades UK" : isNational ? "National Hire Solutions - CityTrades UK" : "CityTrades UK - Find Trusted Local Tradesmen"} description={isLondon ? "Find trusted tradesmen in London. Vetted professionals for every job." : isNational ? "Professional tradesmen staffing across the UK." : "Find vetted, reliable tradesmen in your city. From emergency repairs to full renovations."}>
+<ActiveLayout title={isLondon ? "London Tradesmen - CityTrades UK" : isNational ? "National Hire Solutions - CityTrades UK" : "CityTrades UK - Find Trusted Local Tradesmen"} description={isLondon ? "Find trusted tradesmen in London. Vetted professionals for every job." : isNational ? "Professional tradesmen staffing across the UK." : "Find vetted, reliable tradesmen in your city. From emergency repairs to full renovations."}>
   {isLondon ? (
     <!-- London Page -->
     <>
@@ -179,4 +181,4 @@ const cities = [
       </section>
     </>
   )}
-</Layout>
+</ActiveLayout>
