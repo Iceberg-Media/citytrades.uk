@@ -16,6 +16,8 @@ const business = {
   phoneLink: "+443330062011",
   email: "sales@nationalhiresolutions.co.uk",
   website: "https://www.nationalhiresolutions.co.uk/",
+  logo: "https://nationalhiresolutions.co.uk/wp-content/themes/yootheme/cache/NatHire-White-0aaf7f55.png",
+  favicon: "https://nationalhiresolutions.co.uk/wp-content/uploads/National-Hire-Favicon.png",
 };
 ---
 
@@ -31,7 +33,7 @@ const business = {
   <meta property="og:description" content={description} />
   <meta property="og:url" content={url} />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href={business.favicon} />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9234344VFW"></script>
@@ -151,8 +153,7 @@ const business = {
   <header class="micro-header">
     <nav class="micro-nav">
       <a href="/" class="micro-logo">
-        <div class="micro-logo-icon">🚜</div>
-        <div class="micro-logo-text">National Hire Solutions</div>
+        <img src={business.logo} alt={business.name} style="height:40px;width:auto" />
       </a>
       <div class="micro-nav-links">
         <a href="#services">Services</a>
